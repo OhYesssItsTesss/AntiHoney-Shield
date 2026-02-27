@@ -33,6 +33,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Share the Shield
+    const shareBtn = document.getElementById('shareShield');
+    shareBtn.onclick = function() {
+        const text = encodeURIComponent("I'm using AntiHoney-Shield to stop browser extensions from hijacking my commissions. 🛡️Reclaim your margins! #AntiHoney #Ecommerce #Privacy");
+        const url = "https://github.com/OhYesssItsTesss/AntiHoney-Shield";
+        window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`);
+    };
+
     // Periodically update the log if new events come in while popup is open
     setInterval(updateUI, 1000);
     updateUI();
